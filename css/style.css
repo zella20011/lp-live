@@ -1,0 +1,771 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	box-sizing: border-box;
+}
+
+html,body{
+	position: relative;
+	float: left;
+	width: 100%;
+	line-height: 1.5;
+}
+header{
+	float: left;
+	width: 100%;
+	background: url(../image/header-bg.png) no-repeat 100%;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	background-position: center;
+}
+
+.center{
+	float: none;
+	display: table;
+	width: 100%;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+header .left{
+	float: left;
+	width: 50%;
+}
+header .left .top{
+	float: left;
+	width: 100%;
+	margin-top: 40px;
+}
+header .left .top li{
+	float: left;
+	width: 100%;
+	max-width: 240px;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 19px;
+	font-weight: 300;
+	color: #000;
+	text-align: right;
+}
+header .left .top li span{
+	display: block;
+	font-size: 9px;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.4px;
+}
+header .left .top li:last-child span{
+	display: block;
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: none;
+	letter-spacing: 1px;
+}
+header .left .top li:before{
+	content: '';
+	float: left;
+	display: block;
+	width: 47px;
+	height: 47px;
+	margin-top: -3px;
+	margin-right: 12px;
+	background: url(../image/ball.png) no-repeat 100%;
+	background-size: cover;
+}
+header .left .top li:last-child{
+	float: right;
+	width: 100%;
+	max-width: 200px;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+}
+header .left .top li:last-child:before{
+	content: '';
+	float: left;
+	display: block;
+	width: 35px;
+	height: 35px;
+	margin-right: 12px;
+	background: url(../image/location.png) no-repeat 100%;
+	background-size: cover;
+}
+header .left .live{
+	float: left;
+	width: 100%;
+	margin-top: 60px;
+	background: url(../image/live.png) no-repeat;
+	background-position: 90% 0px; 
+}
+header .left .live span{
+	display: block;
+	font-family: "Museo Sans Cyrl 500";
+	font-size: 100px;
+	font-weight: 500;
+	line-height: 1;
+	color: #000;
+}
+header .left .live span:last-child{
+	margin-top: -80px;
+	font-family: "Solena";
+	font-size: 200px;
+	font-weight: 400;
+}
+header .left .play{
+	display: none;
+}
+header .left .text-small{
+	float: left;
+	display: block;
+	width: 100%;
+	max-width: 415px;
+	margin-top: 15px;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 24px;
+	font-weight: 300;
+	color: #000;
+}
+.button{
+	float: left;
+	width: 100%;
+	max-width: 280px;
+	min-height: 55px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 3px 0 #cc7100;
+	background-image: linear-gradient(to top, #ff6000 0%, #ffff00 100%);
+	font-family: "Museo Sans Cyrl 700";
+	font-size: 18px;
+	font-weight: 700;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.button:hover{
+	box-shadow: 0 3px 0 #413dd7;
+	background-image: linear-gradient(to top, #8824fa 0%, #00f7ff 100%);
+}
+header .left a{
+	margin-top: 25px;
+	margin-bottom: 125px;
+}
+header .right{
+	float: right;
+	width: 50%;
+}
+#play{
+	float: left;
+	width: 100%;
+	max-width: 145px;
+	min-height: 145px;
+	margin-top: 195px;
+	border-radius: 50%;	
+	box-shadow: 0 30px 60px rgba(0, 73, 214, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	background: #ffffff url(../image/play.png) no-repeat 57% center;
+}
+#training{
+	float: left;
+	width: 100%;
+	margin-top: 40px;
+}
+h2{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-family: "Museo Sans Cyrl 500";
+	font-size: 45px;
+	font-weight: 500;
+	color: #000;
+}
+#training ul{
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+#training ul li{
+	float: left;
+	width: 33%;
+	min-height: 120px;
+	margin-top: 52px;
+}
+#training ul li img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+#training ul li span{
+	display: block;
+	width: 100%;
+	max-width: 235px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 16px;
+	font-weight: 300;
+	color: #000;
+}
+#training .button{
+	float: none;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#life{
+	float: left;
+	width: 100%;
+	margin-top: 90px;
+}
+#life h2{
+	margin-bottom: 20px;
+}
+#life .center>div{
+	width: 50%;
+	border: 1px solid #c0c0c0;
+	background: #ffffff;
+}
+#life .left{
+	float: left;
+	border-radius: 5px 0px 0px 5px;
+}
+#life .center div div{
+	float: left;
+	width: 100%;
+	padding-top: 25px;
+	padding-left: 78px;
+	padding-right: 90px;
+	padding-bottom: 25px;
+}
+#life .left div:nth-child(odd){
+	background: #f7f7f7;
+}
+#life>.center>.left>.first{
+	border-radius: 5px 0px 0px 0px;
+	background: #3b3b41;
+}
+#life .left div:last-child{
+	border-radius: 0px 0px 0px 5px;
+}
+#life div .first span{
+	display: block;
+	color: #ffffff;
+	font-family: "Museo Sans Cyrl 500";
+	font-size: 24px;
+	font-weight: 500;
+}
+#life div ul{
+	float: left;
+	width: 100%;
+}
+#life div ul li{
+	float: left;
+	width: 100%;
+	margin: 5px 0px;
+	list-style: disc;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 16px;
+	font-weight: 300;
+}
+#life div span{
+	display: block;
+	color: #000;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 16px;
+	font-weight: 300;
+}
+#life .center .right{
+	float: right;
+	border-left: none;
+	border-radius: 0px 5px 5px 0px;
+}
+#life>.center>.right>.first{
+	padding-bottom: 34px;
+	border-radius: 0px 5px 0px 0px;
+	background: url(../image/life-right-bg.png) no-repeat 100% 100%;
+}
+#life>.center>.right>.first>span{
+	color: #000;
+}
+#life .right .pt{
+	padding-top: 16px;
+}
+#life .right div:nth-child(odd){
+	background: #f3ffff;
+}
+#life .right div:last-child{
+	border-radius: 0px 0px 5px 0px;
+}
+#life .text{
+	float: none;
+	display: block;
+	width: 100%;
+	max-width: 465px;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Museo Sans Cyrl 500";
+	font-size: 25px;
+	font-weight: 500;
+	color: #000;
+	text-align: center;
+	background: url(../image/luck.png) no-repeat;
+	background-position: right bottom;
+}
+#question{
+	float: left;
+	width: 100%;
+	margin-top: 120px;
+}
+#question .list{
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+#question .list .colum{
+	float: left;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #a2a2a2;
+}
+#question .list .colum span:hover{
+	cursor: pointer;
+}
+#question .list .colum span{
+	position: relative;
+	float: left;
+	width: 100%;
+	display: block;
+	padding-right: 40px;
+	color: #7f55ff;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 30px;
+	font-weight: 300;
+}
+#question .list .colum span:after{
+	position: absolute;
+	top: 15%;
+	right: 0px;
+	content: '';
+	display: block;
+	width: 18px;
+	height: 12px;
+	background: url(../image/arow-list5.png) no-repeat;
+}
+#question .list .colum div{
+	float: left;
+	display: none;
+	width: 100%;
+	padding-top: 25px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	color: #000;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 20px;
+	font-weight: 300;
+}
+footer{
+	float: left;
+	width: 100%;
+	margin-top: 150px;
+	padding: 35px 0px; 
+	background: #56545c;
+}
+footer .left{
+	float: left;
+	width: 50%;
+}
+footer .left a{
+	display: block;
+	float: left;
+	margin-top: 8px;
+	opacity: 0.15;
+	color: #ffffff;
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 12px;
+	font-weight: 300;
+	text-decoration: none;
+	margin-right: 25px;
+}
+footer .left a:hover{
+	opacity: 0.5;
+	text-decoration: underline;
+}
+footer .right{
+	float: right;
+	width: 100%;
+	max-width: 230px;
+}
+footer .right a{
+	float: left;
+	display: block;
+	opacity: 0.15;
+	width: 100%;
+	max-width: 35px;
+	min-height: 35px;
+	margin-left: 10px;
+}
+footer .right a:hover{
+	opacity: 0.5;
+}
+footer .right .fb{
+	background: url(../image/fb-.png) no-repeat;
+}
+footer .right .vk{
+	background: url(../image/vk.png) no-repeat;
+}
+footer .right .inst{
+	background: url(../image/inst.png) no-repeat;
+}
+footer .right .youtube{
+	background: url(../image/you-tube.png) no-repeat;
+}
+footer .right .telegram{
+	background: url(../image/telegram.png) no-repeat;
+}
+.modal{
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,0);
+	display:none;
+	z-index: 110;
+}
+.modal .closed{
+	position: absolute;
+	top: -25px;
+	right: -25px;
+	width: 20px;
+	height: 20px;
+	background: url(../image/closed.png) no-repeat;
+	cursor: pointer;
+}
+.overlay{
+	z-index:101;
+	position:fixed;
+	background-color:#000; 
+	opacity:0.7;
+	-moz-opacity:0.7;
+	filter:alpha(opacity=70);
+	width:100%; 
+	height:100%;
+	top:0;
+	left:0;
+	cursor:pointer;
+	display:none;
+}
+
+
+
+@media(max-width: 1200px){
+	.center{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+@media(max-width: 1110px){
+	header .left .live span{
+		font-size: 75px;
+	}
+	header .left .live span:last-child{
+		font-size: 150px;
+		margin-top: -60px;
+	}
+	header .left .text-small{
+		font-size: 22px;
+	}
+	h2{
+		font-size: 40px;
+	}
+	#life div .first span{
+		font-size: 22px;
+	}
+	#life .center div div{
+		padding-top: 20px;
+		padding-left: 70px;
+		padding-right: 90px;
+		padding-bottom: 20px;
+	}
+	#life > .center > .right > .first{
+		padding-bottom: 24px;
+	}
+	#life .text{
+		max-width: 435px;
+		font-size: 22px;
+	}
+	#question .list .colum span{
+		font-size: 25px;
+	}
+	#question .list .colum div{
+		font-size: 18px;
+	}
+	footer .left{
+		width: 100%;
+		max-width: 535px;
+	}
+}
+@media(max-width: 1024px){
+	#training ul li{
+		width: 50%;
+	}
+	#life .center > div{
+		width: 90%;
+		float: none !important;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#life > .center > .right > .first{
+		background-repeat: repeat-x;
+	}
+	#life .left, #life .left .first{
+		border-radius: 5px 5px 0px 0px !important;
+	}
+	#life .center .right{
+		border-left: 1px solid #c0c0c0;
+		border-radius: 0px 0px 5px 5px;
+		border-top: none;
+	}
+	#life .center .right .first{
+		border-radius: 0px;
+		padding-bottom: 35px;
+	}
+	#life .right div:last-child{
+		border-radius: 0px 0px 5px 5px;
+	}
+	#life div span{
+		text-align: center;
+	}
+}
+@media(max-width: 950px){
+	header .left .top li{
+		max-width: 100% !important;
+		float: left !important;
+		text-align: left !important;
+		margin-bottom: 20px;
+	}
+	header .left .top li::before{
+		margin-top: -1px;
+	}
+	header .left .top li:last-child::before{
+		margin-left: 7px;
+		margin-right: 19px;
+	}
+	header .left .live{
+		margin-top: 25px;
+	}
+	header .left .live span{
+		margin-top: 35px;
+	}
+}
+@media(max-width: 850px){
+	header .left .live span{
+		font-size: 60px;
+	}
+	header .left .live span:last-child{
+		font-size: 120px;
+		margin-top: -45px;
+	}
+	header .left .text-small{
+		font-size: 20px;
+	}
+	h2{
+		font-size: 30px;
+	}
+	#life div .first span{
+		font-size: 20px;
+	}
+	footer .left{
+		max-width: 220px;
+	}
+}
+@media(max-width: 750px){
+	header{
+		background-position: -5px 0px;
+	}
+	header .right a{
+		margin-left: 50px;
+	}
+	.modal{
+		width: 90%;
+		height: 350px;
+	}
+	.modal iframe{
+		width: 100%;
+		height: 100%;
+	}
+	.modal .closed{
+		right: 10px;
+	}
+
+
+
+	header>.center>div{
+		width: 100%;
+	}
+	header .left .top{
+		float: none;
+		display: table;
+		width: 100%;
+		max-width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .left .live{
+		width: 50%;
+		background-position: 50% 0px;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+	}
+	header .left .live span{
+		margin-top: 45px;
+		text-align: center;
+	}
+	header .right{
+		display: none;
+	}
+	.play{
+		float: none;
+		display: block !important;
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px !important;
+		width: 100%;
+		max-width: 145px;
+		min-height: 145px;
+		border-radius: 50%;	
+		box-shadow: 0 30px 60px rgba(0, 73, 214, 0.2);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		background: #ffffff url(../image/play.png) no-repeat 57% center;
+	}
+	header .left .text-small{
+		max-width: 100%;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	header .left .button{
+		float: none;
+		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+}
+@media(max-width: 550px){
+	.modal{
+		height: 300px;
+	}
+	
+	#training ul li{
+		width: 100%;
+	}
+	
+	h2{
+		font-size: 28px;
+	}
+	#question .list .colum span{
+		font-size: 20px;
+	}
+	#question .list .colum div{
+		font-size: 16px;
+	}
+	#life .center > div{
+		width: 100%;
+	}
+	#life .center div div{
+		padding-top: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-bottom: 10px;
+	}
+	footer .left{
+		display: table;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	footer .left a {
+		float: none;
+		text-align: center;
+		margin-right: 0;
+	}
+	footer .right{
+		display: table;
+		float: none;
+		margin-top: 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media(max-width: 500px){
+	#life .text{
+		max-width: 350px;
+		font-size: 20px;
+		background-position: bottom center;
+	}
+}
+@media(max-width: 330px){
+	#life .text{
+		width: 90%;
+		background-position: bottom right;
+	}
+}
